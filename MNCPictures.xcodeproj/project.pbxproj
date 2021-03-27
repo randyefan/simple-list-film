@@ -13,6 +13,13 @@
 		61DF31DA260E288900A10FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DF31D8260E288900A10FE7 /* Main.storyboard */; };
 		61DF31DC260E288900A10FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DF31DB260E288900A10FE7 /* Assets.xcassets */; };
 		61DF31DF260E288900A10FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DF31DD260E288900A10FE7 /* LaunchScreen.storyboard */; };
+		61DF31E8260E28F500A10FE7 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DF31E7260E28F500A10FE7 /* FilmCell.xib */; };
+		61DF31EC260E2B8A00A10FE7 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF31EB260E2B8A00A10FE7 /* FilmCell.swift */; };
+		61DF31F4260E2CD700A10FE7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF31F3260E2CD700A10FE7 /* Model.swift */; };
+		61DF31F8260E2F6A00A10FE7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF31F7260E2F6A00A10FE7 /* Endpoint.swift */; };
+		61DF31FC260E317600A10FE7 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF31FB260E317600A10FE7 /* ClientAPI.swift */; };
+		61DF31FF260E31D000A10FE7 /* KlaklikClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF31FE260E31D000A10FE7 /* KlaklikClient.swift */; };
+		61DF3203260E324500A10FE7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF3202260E324500A10FE7 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		61DF31DB260E288900A10FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61DF31DE260E288900A10FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61DF31E0260E288900A10FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61DF31E7260E28F500A10FE7 /* FilmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmCell.xib; sourceTree = "<group>"; };
+		61DF31EB260E2B8A00A10FE7 /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
+		61DF31F3260E2CD700A10FE7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		61DF31F7260E2F6A00A10FE7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		61DF31FB260E317600A10FE7 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
+		61DF31FE260E31D000A10FE7 /* KlaklikClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlaklikClient.swift; sourceTree = "<group>"; };
+		61DF3202260E324500A10FE7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +54,7 @@
 		61DF31C6260E288900A10FE7 = {
 			isa = PBXGroup;
 			children = (
+				61DF31E0260E288900A10FE7 /* Info.plist */,
 				61DF31D1260E288900A10FE7 /* MNCPictures */,
 				61DF31D0260E288900A10FE7 /* Products */,
 			);
@@ -56,15 +71,61 @@
 		61DF31D1260E288900A10FE7 /* MNCPictures */ = {
 			isa = PBXGroup;
 			children = (
-				61DF31D2260E288900A10FE7 /* AppDelegate.swift */,
-				61DF31D4260E288900A10FE7 /* SceneDelegate.swift */,
-				61DF31D6260E288900A10FE7 /* ViewController.swift */,
-				61DF31D8260E288900A10FE7 /* Main.storyboard */,
-				61DF31DB260E288900A10FE7 /* Assets.xcassets */,
-				61DF31DD260E288900A10FE7 /* LaunchScreen.storyboard */,
-				61DF31E0260E288900A10FE7 /* Info.plist */,
+				61DF3208260E3A4900A10FE7 /* Resources */,
+				61DF3207260E3A3700A10FE7 /* Model */,
+				61DF3206260E3A1300A10FE7 /* View */,
+				61DF3201260E322B00A10FE7 /* ViewModel */,
+				61DF31F6260E2E0C00A10FE7 /* Networking */,
 			);
 			path = MNCPictures;
+			sourceTree = "<group>";
+		};
+		61DF31F6260E2E0C00A10FE7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				61DF31F7260E2F6A00A10FE7 /* Endpoint.swift */,
+				61DF31FB260E317600A10FE7 /* ClientAPI.swift */,
+				61DF31FE260E31D000A10FE7 /* KlaklikClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		61DF3201260E322B00A10FE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61DF3202260E324500A10FE7 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61DF3206260E3A1300A10FE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61DF31EB260E2B8A00A10FE7 /* FilmCell.swift */,
+				61DF31D6260E288900A10FE7 /* ViewController.swift */,
+				61DF31D8260E288900A10FE7 /* Main.storyboard */,
+				61DF31E7260E28F500A10FE7 /* FilmCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61DF3207260E3A3700A10FE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61DF31F3260E2CD700A10FE7 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61DF3208260E3A4900A10FE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				61DF31D2260E288900A10FE7 /* AppDelegate.swift */,
+				61DF31D4260E288900A10FE7 /* SceneDelegate.swift */,
+				61DF31DB260E288900A10FE7 /* Assets.xcassets */,
+				61DF31DD260E288900A10FE7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DF31DF260E288900A10FE7 /* LaunchScreen.storyboard in Resources */,
+				61DF31E8260E28F500A10FE7 /* FilmCell.xib in Resources */,
 				61DF31DC260E288900A10FE7 /* Assets.xcassets in Resources */,
 				61DF31DA260E288900A10FE7 /* Main.storyboard in Resources */,
 			);
@@ -137,8 +199,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DF31FF260E31D000A10FE7 /* KlaklikClient.swift in Sources */,
+				61DF3203260E324500A10FE7 /* ViewModel.swift in Sources */,
+				61DF31F8260E2F6A00A10FE7 /* Endpoint.swift in Sources */,
+				61DF31F4260E2CD700A10FE7 /* Model.swift in Sources */,
+				61DF31FC260E317600A10FE7 /* ClientAPI.swift in Sources */,
 				61DF31D7260E288900A10FE7 /* ViewController.swift in Sources */,
 				61DF31D3260E288900A10FE7 /* AppDelegate.swift in Sources */,
+				61DF31EC260E2B8A00A10FE7 /* FilmCell.swift in Sources */,
 				61DF31D5260E288900A10FE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33Z87RYAC2;
-				INFOPLIST_FILE = MNCPictures/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33Z87RYAC2;
-				INFOPLIST_FILE = MNCPictures/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
